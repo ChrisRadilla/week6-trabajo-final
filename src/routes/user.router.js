@@ -8,7 +8,7 @@ routerUser.route('/')
     .get(verifyJwt, getAll) //🔒🔒🔒
     .post(create);
 
-routerUser.route('/login') //? /_> users/login
+routerUser.route('/login') //users/login
     .post(login)
 
 routerUser.route('/me') //users/me
