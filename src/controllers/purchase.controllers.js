@@ -7,6 +7,7 @@ const ProductImg = require('../models/ProductImg');
 
 const getAll = catchError(async (req, res) => {
     const userId = req.user.id
+    console.log(res.body)
     const result = await Purchase.findAll({
         where: { userId },
         include: [

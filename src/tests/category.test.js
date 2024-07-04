@@ -9,8 +9,8 @@ const BASE_USERS_USERS = "/api/v1/users"
 
 beforeAll(async () => {
     const user = {
-        email: "zarquiz@email.com",
-        password: "zarquiz1234"
+        email: "Wick@gmail.com",
+        password: "John1234"
     }
 
     const res = await request(app)
@@ -23,7 +23,7 @@ beforeAll(async () => {
 
 test("POST ->'URL_BASE', should return staus code 201 and res.body.name === category.name", async () => { //🔐
     const category = {
-        name: "Tecno"
+        name: "Electronics"
     }
     const res = await request(app)
         .post(BASE_URL)

@@ -14,8 +14,8 @@ const BASE_URL_LOGIN = '/api/v1/users/login'
 
 beforeAll(async () => {
     const user = {
-        email: "zarquiz@email.com",
-        password: "zarquiz1234"
+        email: "Wick@gmail.com",
+        password: "John1234"
     }
     const res = await request(app)
         .post(BASE_URL_LOGIN)
@@ -24,15 +24,15 @@ beforeAll(async () => {
     TOKEN = res.body.token
 
     const categoryBody = {
-        name: "smart Tv"
+        name: "Game System"
     }
 
     category = await Category.create(categoryBody)
 
     product = {
-        title: "Lg oled 55",
-        description: "lroem10",
-        price: 20.30,
+        title: "Sony PS5",
+        description: "the best console",
+        price: 699.99,
         categoryId: category.id
     }
 
@@ -82,7 +82,7 @@ test("GET ONE -> 'BASE_URL/:id', should resturn status code 200 and res.body.tit
 test("PUT -> 'BASE_URL/:id', should resturn status code 200 and res.body.title = productUpdate.title", async () => {
 
     const productUpdate = {
-        title: "Samsung oled 55",
+        title: "playstation 5",
     }
 
     const res = await request(app)

@@ -4,14 +4,14 @@ const app = require("../app")
 const Product = require("../models/Product")
 
 const BASE_URL_LOGIN = '/api/v1/users/login'
-const BASE_URL = "/api/v1/purchase"
+const BASE_URL = "/api/v1/purchases"
 
 let TOKEN, product, cart
 
 beforeAll(async () => {
     const body = {
-        email: "zarquiz@email.com",
-        password: "zarquiz1234"
+        email: "Wick@gmail.com",
+        password: "John1234"
     }
 
     const res = await request(app)

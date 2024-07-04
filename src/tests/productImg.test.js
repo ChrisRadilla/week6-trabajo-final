@@ -10,8 +10,8 @@ const BASE_URL_USERS = '/api/v1/users'
 
 beforeAll(async () => {
     const user = {
-        email: "zarquiz@email.com",
-        password: "zarquiz1234"
+        email: "Wick@gmail.com",
+        password: "John1234"
     }
     const res = await request(app)
         .post(`${BASE_URL_USERS}/login`)

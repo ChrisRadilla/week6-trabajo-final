@@ -7,18 +7,13 @@ const Product = require("../models/Product")
 const BASE_URL_USERS = "/api/v1/users"
 const BASE_URL = "/api/v1/carts"
 
-let TOKEN
-let productBody
-let bodyCart
-let product
-let userId
-let cartId
+let TOKEN, productBody, bodyCart, product, userId, cartId
 
 
 beforeAll(async () => {
     const user = {
-        email: "zarquiz@email.com",
-        password: "zarquiz1234"
+        email: "Wick@gmail.com",
+        password: "John1234"
     }
     const res = await request(app)
         .post(`${BASE_URL_USERS}/login`)
@@ -29,9 +24,9 @@ beforeAll(async () => {
     userId = res.body.user.id
 
     productBody = {
-        title: "productTest",
-        description: "lorem20",
-        price: 23
+        title: "playstation 5",
+        description: "lorem ipsum",
+        price: 699
     }
 
     product = await Product.create(productBody)
